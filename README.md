@@ -138,4 +138,28 @@ done
 ```
 After this step, you will have numerous large CSV files.
 
-### Step 3: Do what ever you want to do
+### Step 3: Process the data
+
+ These packages are like a Swiss Army knife ~~(NOT DNANEXUS)~~ for accelerometer researchers. Each package has its strengths, and you can choose based on your specific research needs.
+
+#### [GGIR](https://github.com/wadpac/GGIR)
+GGIR is a comprehensive tool for sleep, physical activity, and circadian rhythm analysis. The latest version (3.1.7) even outputs summarized event data. If you’re using the Verisense step count algorithm ~~(Remember to use V2 parameter)~~, you’ll get cadence.
+
+#### [mMARCH.AC](https://github.com/WeiGuoNIMH/mMARCH.AC)
+This now works with NHANES data (after a few edits—originally, it relied way too heavily on the Java-based `read.xlsx`, which was overkill). See [this](https://github.com/j262byuu/mMARCH.AC)
+
+#### [biobankAccelerometerAnalysis](https://github.com/OxWearables/biobankAccelerometerAnalysis)
+For physical activity-related research, I find the results from this package particularly reliable. Most outputs are presented at the percentage level.
+
+#### [stepcount](https://github.com/OxWearables/stepcount)
+This is an excellent package for step count analysis. Both SSL and RF algorithms perform well. I’ve found the step count results here to be reliable ~~(Comparing to Verisense step count algorithm)~~.
+
+#### [asleep](https://github.com/OxWearables/asleep)
+This package offers interesting results, but it can be resource-intensive. I recommend allocating at least 16 GB of memory per session to ensure smooth processing.
+
+#### [TLBC](https://github.com/cran/TLBC)
+This package can be used to process NHANES data. While you can’t download the trained models, you can use [CAPTURE-24](https://github.com/OxWearables/capture24)
+
+# If you have any questions or would like access to the processed data (it’s way too large to upload to GitHub), feel free to contact me on LinkedIn!
+
+
